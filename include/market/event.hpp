@@ -14,6 +14,16 @@ enum class Side : std::uint8_t {
     Sell = 1  // Ask
 };
 
+enum class EventType : std::uint8_t {
+    Add     = 0,
+    Cancel  = 1,
+    Modify  = 2,
+    Execute = 3,
+    Trade   = 4,
+    Reset   = 5
+};
+
+
 class MarketEvent {
   Timestamp timestamp_ns;
   OrderID order_id;
