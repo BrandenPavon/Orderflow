@@ -25,12 +25,20 @@ enum class EventType : std::uint8_t {
 
 
 class MarketEvent {
+public:
   Timestamp timestamp_ns;
   OrderID order_id;
   Price price;
 
   Quantity quantity;
   SymbolID symbol_id;
-
+  
+  EventType event;
+  Side side;
+  
+  std::uint64_t sequence;
+  
+  // No constructor because MarketEvent is simple aggregate, easy to seralize, copy & batch, across CPU/FPGA boundary
 };
+
 #endif
