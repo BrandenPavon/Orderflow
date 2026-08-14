@@ -3,6 +3,7 @@
 
 #include <cstdint>
 
+namespace market {
 using Timestamp = std::uint64_t; // Unix timestamp in nano seconds UTC
 using OrderID = std::uint64_t; // start at 1, 
 using Price = std::int64_t; // $10993.32 -> 1099332
@@ -41,4 +42,5 @@ public:
   // No constructor because MarketEvent is simple aggregate, easy to seralize, copy & batch, across CPU/FPGA boundary
 };
 
+}
 #endif
