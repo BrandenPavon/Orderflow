@@ -7,11 +7,6 @@
 
 namespace market {
 
-enum class Side : std::uint8_t {
-    Buy  = 0, // Bid
-    Sell = 1  // Ask
-};
-
 enum class EventType : std::uint8_t {
     Add     = 0,
     Cancel  = 1,
