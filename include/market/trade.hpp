@@ -1,8 +1,8 @@
 #ifndef MARKET_TRADE_HPP
 #define MARKET_TRADE_HPP
 
+#include "common/types.hpp"
 #include "market/types.hpp"
-#include "market/event.hpp"
 
 namespace market {
 

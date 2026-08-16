@@ -2,8 +2,8 @@
 #define MARKET_ORDER_HPP
 
 #include <cstdint>
+#include "common/types.hpp"
 #include "market/types.hpp"
-#include "market/event.hpp"
 
 namespace market {
 
