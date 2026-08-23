@@ -9,19 +9,19 @@ namespace market {
 
 
 class MarketTrade {
-  TradeID trade_id;
+public:
+  TradeID trade_id = 0;
 
-  OrderID buy_order_id; 
-  OrderID sell_order_id; 
+  OrderID buy_order_id = 0;
+  OrderID sell_order_id = 0;
 
-  Price price;
-  Quantity quantity;
+  Price price = 0;
+  Quantity quantity = 0;
 
-  Timestamp timestamp_ns;
+  Timestamp timestamp_ns = 0;
    
-  Side aggressor_side;
+  Side aggressor_side = Side::Buy;
 };
 
 }
 #endif
-

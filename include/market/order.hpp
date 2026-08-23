@@ -17,17 +17,17 @@ enum class OrderStatus : std::uint8_t {
 
 class MarketOrder {
 public:
-  Timestamp timestamp_ns;
-  OrderID order_id;
-  Price price;
+  Timestamp timestamp_ns = 0;
+  OrderID order_id = 0;
+  Price price = 0;
 
-  Quantity quantity;
-  SymbolID symbol_id;
+  Quantity quantity = 0;
+  SymbolID symbol_id = 0;
   
-  Side side;
-  OrderStatus status;
+  Side side = Side::Buy;
+  OrderStatus status = OrderStatus::Active;
   
-  std::uint64_t sequence;
+  std::uint64_t sequence = 0;
   
  
   
@@ -36,4 +36,3 @@ public:
 }
 
 #endif
-

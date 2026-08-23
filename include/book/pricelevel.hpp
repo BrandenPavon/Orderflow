@@ -7,15 +7,16 @@
 namespace book {
 
 using OrderSlot = std::uint32_t;
+inline constexpr OrderSlot INVALID_ORDER_SLOT = 65535;
 
 class PriceLevel {
 public:
-  Quantity total_quantity;
+  Quantity total_quantity = 0;
 
-  OrderSlot head_order;
-  OrderSlot tail_order;
+  OrderSlot head_order = INVALID_ORDER_SLOT;
+  OrderSlot tail_order = INVALID_ORDER_SLOT;
 
-  std::uint32_t order_count;
+  std::uint32_t order_count = 0;
 
 };
 
